@@ -12,11 +12,8 @@ contract Election {
 
     uint public candidatesCount;
 
-    
-    // event votedEvent (
-    //     uint indexed _candidateId
-    // );
-    
+   
+       
     mapping(address => bool) public voters;
     mapping(uint => Candidate) public candidates;
 
@@ -50,8 +47,7 @@ contract Election {
         voters[_vAdd] = true;
         candidates[_candidateId].voteCount ++;
 
-        // trigger voted event
-       // emit votedEvent(_candidateId);
+      
     }
     uint public winner;
     uint public winnerVoteCount = 0 ;
